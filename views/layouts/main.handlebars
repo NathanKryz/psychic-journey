@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Psychic Journey</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!---we had linked our css file--->
+</head>
+<body>
+    <div class="full-page">
+
+    <main>
+      {{{ body }}}
+
+    </main>
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{else}}
+      <script src="/js/login.js"></script>
+      {{/if}}
+</body>
+</html>
