@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Character extends Model {}
+class Hangman extends Model {}
 
-Character.init(
+Hangman.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,38 +11,26 @@ Character.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        class: {
+        word: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        design: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        hitpoints: {
+        monster_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: 'monster',
+                key: 'id',
+            }
         },
-        attack: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        defense: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        }
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'character',
+        modelName: 'hangman',
     }
 );
 
-module.exports = Character;
+module.exports = Hangman;
