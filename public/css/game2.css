@@ -8,7 +8,7 @@
 {
     height: 100%;
 	width: 100%;
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom1.gif);
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom2.gif);
 	background-position: center;
 	background-size: cover;
 	position: absolute;
@@ -96,12 +96,13 @@ a
     
 }
 
-#btn-el {
+.btn-el {
     bottom: 10px;
     font-size: 30px;
     font-weight: bolder;
     position: relative;
     top: 25px; 
     left: 260px;
+    background-color: transparent;
     background: gray;
 }
