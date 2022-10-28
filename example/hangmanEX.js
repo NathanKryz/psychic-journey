@@ -1,9 +1,13 @@
 const guessWord = document.getElementById('guessword-el');
 const startButton = document.getElementById('btn-el');
+const timerEl = document.getElementById('time-el');
 
 let gameWord = "";
 let wordBlank = 0;
 let win = false;
+let timer;
+let timerCount;
+
 
 let fullWord = [];
 let hiddenWord = [];
@@ -13,8 +17,10 @@ let words = ['sword', 'shield', 'armor', 'magic', 'staff'];
 function startFight(event) {
     event.preventDefault();
     win = false;
+    timerCount = 30;
     startButton.disabled = true;
     startGuess();
+    startTimer();
 };
 
 function startGuess() {
@@ -41,6 +47,28 @@ function checkWin() {
 winGame = () => {
     guessWord.textContent = "You Have Defeated ME!";
     startButton.disabled = false;
+};
+
+loseGame = () => {
+    guessWord.textContent = "You Will Never Defeat ME!";
+    startButton.disabled = false;
+};
+
+function startTimer() {
+  timer = setInterval(function() {
+      timerCount--;
+      timerEl.textContent = timerCount;
+      if (timerCount >= 0) {
+          if (win && timerCount > 0) {
+              clearInterval(timer);
+              winGame();
+          }
+      }
+      if (timerCount === 0) {
+          clearInterval(timer);
+          loseGame();
+      }
+  }, 1000)
 }
 
 
@@ -62,7 +90,6 @@ function checkLetters(letter) {
   };
 
   document.addEventListener("keydown", function(event) {
-    console.log('hello')
    
     let key = event.key.toLowerCase();
     let alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789 ".split("");
@@ -72,6 +99,8 @@ function checkLetters(letter) {
       checkWin();
     }
   });
+
+
 
   startButton.addEventListener("click", startFight);
 
