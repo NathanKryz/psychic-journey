@@ -1,0 +1,198 @@
+[
+    {
+        "word":"alchemist",
+        "monster_id": 1
+    },
+    {
+        "word":"feudal",
+        "monster_id": 1
+    },
+    {
+        "word":"liege",
+        "monster_id": 1
+    },
+    {
+        "word":"lord",
+        "monster_id": 1
+    },
+    {
+        "word":"medieval",
+        "monster_id": 1
+    },
+    {
+        "word":"minstrel",
+        "monster_id": 1
+    },
+    {
+        "word":"romance",
+        "monster_id": 1
+    },
+    {
+        "word":"squire",
+        "monster_id": 1
+    },
+    {
+        "word":"villian",
+        "monster_id": 1
+    },
+    {
+        "word":"viking",
+        "monster_id": 1
+    },
+    {
+        "word":"castle",
+        "monster_id": 1
+    },
+    {
+        "word":"sword",
+        "monster_id": 1
+    },
+    {
+        "word":"magic",
+        "monster_id": 1
+    },
+    {
+        "word":"staff",
+        "monster_id": 1
+    },
+    {
+        "word":"viking",
+        "monster_id": 1
+    },
+    {
+        "word":"manor",
+        "monster_id": 1
+    },
+    {
+        "word":"medieval ages",
+        "monster_id": 1
+    },
+    {
+        "word":"knights honour",
+        "monster_id": 2
+    },
+    {
+        "word":"merchant stand",
+        "monster_id": 2
+    },
+    {
+        "word":"court jester",
+        "monster_id": 2
+    },
+    {
+        "word":"kings landing",
+        "monster_id": 2
+    },
+    {
+        "word":"poor peasant",
+        "monster_id": 2
+    },
+    {
+        "word":"bald monk",
+        "monster_id": 2
+    },
+    {
+        "word":"medieval castle",
+        "monster_id": 2
+    },
+    {
+        "word":"rich nobleman",
+        "monster_id": 2
+    },
+    {
+        "word":"expert craftsman",
+        "monster_id": 2
+    },
+    {
+        "word":"queen of hearts",
+        "monster_id": 2
+    },
+    {
+        "word":"knights squire",
+        "monster_id": 2
+    },
+    {
+        "word":"black plague",
+        "monster_id": 2
+    },
+    {
+        "word":"locust rain",
+        "monster_id": 2
+    },
+    {
+        "word":"lance joust",
+        "monster_id": 2
+    },
+    {
+        "word":"sword parry",
+        "monster_id": 2
+    },
+    {
+        "word":"knights armor",
+        "monster_id": 2
+    },
+    {
+        "word":"tournament of power",
+        "monster_id": 2
+    },
+    {
+        "word":"thou shall not pass",
+        "monster_id": 3
+    },
+    {
+        "word":"war has changed",
+        "monster_id": 3
+    },
+    {
+        "word":"death can have me when its earned me",
+        "monster_id": 3
+    },
+    {
+        "word":"can you guess the answer",
+        "monster_id": 3
+    },
+    {
+        "word":"imagination is the only weapon",
+        "monster_id": 3
+    },
+    {
+        "word":"dead men tell no lies",
+        "monster_id": 3
+    },
+    {
+        "word":"god speed man",
+        "monster_id": 3
+    },
+    {
+        "word":"going to seige",
+        "monster_id": 3
+    },
+    {
+        "word":"fare thee well",
+        "monster_id": 3
+    },
+    {
+        "word":"my peerless paramour",
+        "monster_id": 3
+    },
+    {
+        "word":"a plague upon thee",
+        "monster_id": 3
+    },
+    {
+        "word":"romantic love and gunpowder",
+        "monster_id": 3
+    },
+    {
+        "word":"let loose the hounds of war",
+        "monster_id": 3
+    },
+    {
+        "word":"chivalry is dead",
+        "monster_id": 3
+    },
+    {
+        "word":"i am the main character",
+        "monster_id": 3
+    }
+]
