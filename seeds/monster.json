@@ -1,0 +1,27 @@
+[
+    {
+        "class": "Soldier",
+        "name": "",
+        "design": "",
+        "hitpoints": 200,
+        "attack": 70,
+        "defense": 20
+    },
+    {
+        "class": "General",
+        "name": "",
+        "design": "",
+        "hitpoints": 250,
+        "attack": 80,
+        "defense": 25
+    },
+    {
+        "class": "King",
+        "name": "",
+        "design": "",
+        "hitpoints": 500,
+        "attack": 100,
+        "defense": 35
+    }
+    
+]

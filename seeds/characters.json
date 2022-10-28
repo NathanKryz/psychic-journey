@@ -1,0 +1,24 @@
+[
+    {
+        "class": "Mage",
+        "design": "",
+        "hitpoints": 150,
+        "attack": 90,
+        "defense": 30
+    },
+    {
+        "class": "Warrior",
+        "design": "",
+        "hitpoints": 350,
+        "attack": 30,
+        "defense": 60
+    },
+    {
+        "class": "Rouge",
+        "design": "",
+        "hitpoints": 220,
+        "attack": 60,
+        "defense": 45
+    }
+    
+]
