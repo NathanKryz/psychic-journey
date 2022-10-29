@@ -1,6 +1,8 @@
 const chooseMage = document.querySelector('.mage')
 const chooseWarrior = document.querySelector('.warrior')
 const chooseRouge = document.querySelector('.rogue')
+
+
 function chooseCharacter() {
   if (chooseMage === true) {
     reqUrl = 1
