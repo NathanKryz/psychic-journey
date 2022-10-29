@@ -40,7 +40,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-     // document.location.replace('/profile');  Make this lead to the main game
+      document.location.replace('/characters');
      console.log("check log");
     } else {
       alert(response.statusText);
@@ -66,7 +66,7 @@ const signupFormHandler = async (event) => {
       });
 
       if (response.ok) {
-    //  document.location.replace('/profile'); Make this lead to the main game
+      document.location.replace('/characters');
       console.log("check reg");
       }   else {
         alert(response.statusText);

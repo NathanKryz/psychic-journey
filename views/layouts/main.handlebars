@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Psychic Journey</title>
+
+    {{#if home_page}}
+    {{!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="/css/style.css">
+    {{/if}}
+
+    {{#if char_page}}
+      <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="/css/characterselect.css">
+     {{/if}}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=MedievalSharp&display=swap');
+</style>
     <!---we had linked our css file--->
 </head>
 <body>
     <div class="full-page">
-
+      <div class="navbar">
+            <div>
+                <a href='/'>Psychic Journey</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#'>Contact</a></li>
+                    {{#if logged_in}}
+                    <li><button class='loginbtn' id='logout'onclick="document.getElementById('logout-form').style.display='block'" style="width:auto;">Logout</button></li>
+                    {{else}}
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' id='email-login'class='input-field'placeholder='Email Id' required >
+		    <input type='password' id='password-login'class='input-field'placeholder='Enter Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'id='thislogsin'class='submit-btn'>Log in</button>
+		 </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text' id='name-signup'class='input-field'placeholder='Username' required>
+		     <input type='email' id='email-signup'class='input-field'placeholder='Email Id' required>
+		     <input type='password'id='password-signup'class='input-field'placeholder='Enter Password' required>
+		     <input type='password' id='password-confirm'class='input-field'placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and                                                   conditions</span>
+                    <button type='submit'class='submit-btn'>Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
     <main>
       {{{ body }}}
 
     </main>
-      {{!-- {{#if logged_in}}
+      {{#if logged_in}}
       <script src="/js/logout.js"></script>
       {{else}}
       <script src="/js/login.js"></script>
-      {{/if}} --}}
+      {{/if}}
+      <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
