@@ -21,8 +21,8 @@
     <div class="carousel-item active" style="background-image:url('/img/placeholder.png')">
       <div class="container">
         <input placeholder="Add Character Name"> </input>
-         <h2>MAGE</h2>
-         <p>HP: 150 ATTACK: 90 DEFENSE: 30 </p>
+         <h2>{{characters.0.class}}</h2>
+         <p>HP: {{characters.0.hitpoints}} ATTACK: {{characters.0.attack}} DEFENSE: {{characters.0.defense}} </p>
          <button id="btn-el" type="Submit"> Start Adventure!</button>
       </div>
       
@@ -30,16 +30,16 @@
     <div class="carousel-item" style="background-image:url('/img/placeholder.png')">
       <div class="container">
         <input placeholder="Add Character Name"> </input>
-         <h2>WARRIOR</h2>
-         <p>HP: 350 ATTACK: 30 DEFENSE: 60</p>
+         <h2>{{characters.1.class}}</h2>
+         <p>HP: {{characters.1.hitpoints}} ATTACK: {{characters.1.attack}} DEFENSE: {{characters.1.defense}}</p>
          <button id="btn-el" type="Submit"> Start Adventure!</button>
       </div>
     </div>
     <div class="carousel-item" style="background-image:url('/img/placeholder.png')">
       <div class="container">
         <input placeholder="Add Character Name"> </input>
-         <h2>ROGUE</h2>
-         <p>HP: 220 ATTACK: 60 DEFENSE: 45</p>
+         <h2>{{characters.2.class}}</h2>
+         <p>HP: {{characters.2.hitpoints}} ATTACK: {{characters.2.attack}} DEFENSE: {{characters.2.defense}}</p>
          <button id="btn-el" type="Submit"> Start Adventure!</button>
       </div>
     </div>
