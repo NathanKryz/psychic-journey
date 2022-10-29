@@ -105,3 +105,5 @@ function checkLetters(letter) {
   startButton.addEventListener("click", startFight);
 
 
+  
+
