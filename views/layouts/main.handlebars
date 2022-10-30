@@ -13,6 +13,12 @@
       <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
      <link rel="stylesheet" type="text/css" href="/css/characterselect.css">
      {{/if}}
+
+        {{#if game_page}}
+     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/css/game.css">
+
+     {{/if}}
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=MedievalSharp&display=swap');
 </style>
@@ -35,6 +41,8 @@
                 </ul>
             </nav>
         </div>
+        {{#if logged_in}}
+        {{else}}
         <div id='login-form'class='login-page'>
             <div class="form-box">
                 <div class='button-box'>
@@ -58,6 +66,7 @@
 	         </form>
             </div>
         </div>
+        {{/if}}
     </div>
     <main>
       {{{ body }}}
