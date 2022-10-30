@@ -1,3 +1,6 @@
-import chosenChar  from "./characterselection";
-console.log(chosenChar)
+import chosenfighter from './characterselection';
 
+console.log(chosenfighter);
+
+
+function Character()

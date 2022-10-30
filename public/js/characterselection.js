@@ -1,18 +1,13 @@
 const chooseMage = document.querySelector('.mage');
 const chooseWarrior = document.querySelector('.warrior');
-const chooseRouge = document.querySelector('.rogue');
+const chooseRogue = document.querySelector('.rogue');
 let chosenChar;
-
-async function chooseCharacter() {
-  if (chooseMage === true) {
-    reqUrl = 1;
-  }
-  if (chooseWarrior === true) {
-    reqUrl = 2;
-  }
-  if (chooseRouge === true) {
-    reqUrl = 3;
-  }
+let reqUrl;
+console.log(chooseMage);
+async function chooseCharacter(event, choice) {
+  event.preventDefault();
+  console.log("Click");
+  reqUrl = choice;
 
   await fetch(`/api/characters/${reqUrl}`, {
     method: 'GET',
@@ -23,15 +18,22 @@ async function chooseCharacter() {
     })
     .then(function (data) {
       console.log(data);
-      chosenChar = JSON.parse(data);
+      //Render handlebar function
     });
     console.log(chosenChar);
+
 }
 
-chooseMage.addEventListener('click', chooseCharacter());
-chooseWarrior.addEventListener('click', chooseCharacter());
-chooseRouge.addEventListener('click', chooseCharacter());
+chooseMage.addEventListener('click', function(){chooseCharacter (event, 1)});
+chooseWarrior.addEventListener('click', function(){chooseCharacter (event, 2)});
+chooseRogue.addEventListener('click', function(){chooseCharacter (event, 3)});
 
+// Export stuff to be fixed later
+// const _chosenChar = data;
+// export { _chosenChar as chosenChar }; 
 
-module.exports = characterselection.js;
+// function rendergame(){
 
+//Code goes here .render stuff
+
+// }
