@@ -33,5 +33,5 @@ chooseWarrior.addEventListener('click', chooseCharacter());
 chooseRouge.addEventListener('click', chooseCharacter());
 
 
-module.exports = chosenChar;
+module.exports = characterselection.js;
 
