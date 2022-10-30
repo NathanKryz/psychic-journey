@@ -19,6 +19,7 @@ async function chooseCharacter(event, choice) {
     .then(function (data) {
       console.log(data);
       //Render handlebar function
+      document.location.replace('/game');
     });
     console.log(chosenChar);
 

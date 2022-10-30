@@ -29,4 +29,17 @@ router.get('/characters', async (req, res) => {
     }
 });
 
+router.get('/game', async (req, res) => {
+    try {
+        console.log("Rendering gameplay page #1");
+        req.session.current_page = true;
+        res.render('game', {
+            logged_in: req.session.logged_in,
+            game_page: req.session.current_page,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
