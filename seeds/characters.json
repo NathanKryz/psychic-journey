@@ -1,7 +1,7 @@
 [
     {
         "class": "Mage",
-        "design": "",
+        "design": "/img/themage.png",
         "hitpoints": 150,
         "attack": 90,
         "defense": 30

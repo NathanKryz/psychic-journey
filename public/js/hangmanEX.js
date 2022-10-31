@@ -1,6 +1,7 @@
 const guessWord = document.getElementById('guessword-el');
 const startButton = document.getElementById('btn-el');
 const timerEl = document.getElementById('time-el');
+const background = document.querySelector('.full-page');
 
 let gameWord = "";
 let wordBlank = 0;
@@ -45,6 +46,7 @@ function checkWin() {
   };
 
 winGame = () => {
+    background.setAttribute("style", "background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom2.gif);");
     guessWord.textContent = "You Have Defeated ME!";
     startButton.disabled = false;
 };
