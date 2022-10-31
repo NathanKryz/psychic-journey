@@ -1,10 +1,11 @@
 const guessWord = document.getElementById('guessword-el');
 const startButton = document.getElementById('btn-el');
 const timerEl = document.getElementById('time-el');
+const background = document.querySelector('.full-page');
 let chosenCharacter = JSON.parse(localStorage.getItem('character'));
-console.log(chosenCharacter);
-let chosenMonster = JSON.parse(localStorage.getItem('monster'));
-console.log(chosenMonster)
+// console.log(chosenCharacter);
+// let chosenMonster = JSON.parse(localStorage.getItem('monster'));
+// console.log(chosenMonster)
 
 async function chooseMonster(choice) {
   reqUrl = choice;
@@ -17,14 +18,13 @@ async function chooseMonster(choice) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       localStorage.setItem("monster", JSON.stringify(data));
     });
 };
 
-function init() {
-  chooseMonster(1)
-};
+
+ chooseMonster(1)
 
 let gameWord = "";
 let wordBlank = 0;
@@ -37,23 +37,26 @@ let choice = 1
 let fullWord = [];
 let hiddenWord = [];
 
-let words = chosenMonster.hangmans;
+// let words = chosenMonster.hangmans;
 
 function startFight(event) {
     event.preventDefault();
+    let chosenMonster = JSON.parse(localStorage.getItem('monster'));
+    console.log(chosenMonster);
+    let words = chosenMonster.hangmans;
     win = false;
     timerCount = 30;
     startButton.disabled = true;
-    startGuess();
+    startGuess(words);
     startTimer();
 };
 
-function startGuess() {
+function startGuess(words) {
     randomWord = words[Math.floor(Math.random() * words.length)].word;
-    console.log(randomWord)
+    // console.log(randomWord)
     fullWord = randomWord.split('');
     wordBlank = fullWord.length;
-    console.log(fullWord)
+    // console.log(fullWord)
     hiddenWord = [];
 
     for (let i = 0; i < wordBlank; i++) {
@@ -77,18 +80,27 @@ function loseRound() {
 };
 
 
-function checkWin() {
+async function checkWin() {
     if (randomWord === hiddenWord.join('')) {
+      console.log("Winner is you");
       win = true;
-      winGame();
+     //await winGame();
     }
   };
 
-winGame = () => {
+winGame = async () => {
     guessWord.textContent = "You Have Defeated ME!";
     startButton.disabled = false;
     choice++
-    chooseMonster(choice)
+    console.log(choice);
+    if (choice >= 4){
+      guessWord.textContent = "You have defeated all the monsters!";
+      startButton.disabled = true;
+      // Function for finishing the game?
+      return;
+    }
+    background.setAttribute("style", `background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom${choice}.gif);`);
+   await chooseMonster(choice)
 };
 
 loseGame = () => {
@@ -96,13 +108,14 @@ loseGame = () => {
     startButton.disabled = false;
 };
 
-function startTimer() {
+ function startTimer() {
   timer = setInterval(function() {
       timerCount--;
       timerEl.textContent = timerCount;
       if (timerCount >= 0) {
           if (win && timerCount > 0) {
               clearInterval(timer);
+              console.log("You have won yes");
               winGame();
           }
       }
@@ -143,7 +156,6 @@ function checkLetters(letter) {
   });
 
 
-  init();
   startButton.addEventListener("click", startFight);
 
 
