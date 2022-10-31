@@ -91,8 +91,7 @@ let displayCharacter = function (data) {
 displayMonster(chosenMonster);
 
  function startFight() {
-  let chosenMonster = JSON.parse(localStorage.getItem('monster'));
-  displayMonster(chosenMonster);
+  console.log("You started a fight");
   console.log(chosenMonster);
   let words = chosenMonster.hangmans;
   win = false;
@@ -126,12 +125,14 @@ function startTimer() {
                 console.log(newHPMonster)
                 charAttack(chosenCharacter, chosenMonster);
                 checkContinue(newHPCharacter, newHPMonster);
+                console.log("Monster HP: " + newHPMonster);
             }
         }
         if (timerCount === 0) {
             clearInterval(timer);
             monAttack(chosenCharacter, chosenMonster);
             checkContinue(newHPCharacter, newHPMonster);
+            console.log("Character HP: " + newHPCharacter);
         }
     }, 1000)
 };
@@ -222,6 +223,8 @@ loseGame = () => {
 
 function startAll(event) {
   event.preventDefault();
+  let chosenMonster = JSON.parse(localStorage.getItem('monster'));
+  displayMonster(chosenMonster);
   startFight()
 } 
 
