@@ -97,6 +97,8 @@ a
 }
 
 #btn-el {
+    font-family: 'Bungee Inline', cursive;
+    font-family: 'MedievalSharp', cursive;
     bottom: 10px;
     font-size: 30px;
     font-weight: bolder;
@@ -105,3 +107,47 @@ a
     left: 260px;
     background: gray;
 }
+
+/* Character vs Monster */
+.character2{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top:350px;
+    left:50px;
+    
+
+}
+
+.monster2{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 280px;
+    left: 70%;
+    z-index: -3;
+
+}
+
+
+
+.content{
+    top: 280px;
+    bottom: 80px;
+    
+
+}
+#object1{
+    font-size: 300px;
+    position: absolute;
+    top: 60px;
+    left: 300px;
+    position: relative;
+}
+
+#path1{
+    top: 100px;
+    stroke-width: 50px;
+    stroke-dasharray: 12,12;
+  }
+

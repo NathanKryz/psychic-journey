@@ -96,13 +96,33 @@ a
     
 }
 
-.btn-el {
+#btn-el {
+    font-family: 'Bungee Inline', cursive;
+    font-family: 'MedievalSharp', cursive;
     bottom: 10px;
     font-size: 30px;
     font-weight: bolder;
     position: relative;
     top: 25px; 
     left: 260px;
-    background-color: transparent;
     background: gray;
+}
+/* Character vs Monster */
+.character2{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top:350px;
+    left:50px;
+    
+
+}
+
+.monster2{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 280px;
+    left: 70%;
+
 }
