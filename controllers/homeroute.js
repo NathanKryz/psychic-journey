@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {User, Character} = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     console.log("Rendering homepage");
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
 
 
 
-router.get('/characters', async (req, res) => {
+router.get('/characters', withAuth, async (req, res) => {
     try {
     console.log("Rendering character page");
     const charData = await Character.findAll();
@@ -29,7 +30,7 @@ router.get('/characters', async (req, res) => {
     }
 });
 
-router.get('/game', async (req, res) => {
+router.get('/game', withAuth, async (req, res) => {
     try {
         console.log("Rendering gameplay page #1");
         req.session.current_page = true;
