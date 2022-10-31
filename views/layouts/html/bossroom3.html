@@ -6,6 +6,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=MedievalSharp&display=swap');
     </style>
     <title>Psychic Journey</title>
+    <link rel ="shortcut icon" type ="image/png" href="../../../public/img/PJ-logo.png">
     <link rel="stylesheet" href="../../../public/css/game3.css">
     
     <!---we had linked our css file----->
@@ -17,6 +18,18 @@
                 <a href='index.html'>Psychic Journey</a>
             </div>
         </div>
+        <div id="#content">
+          <div id="object1">🔥</div>
+          <svg id="svg-path" width="500px" height="200px">
+            <path id="path1"
+              stroke="#03a9f4"
+              fill="none"
+              d="M 3 304 L 1195 300 Z"
+            />
+          </svg>
+        </div>
+        <img class ="character2" src='../../../public/img/themage1.png' alt="char">
+        <img class ="monster2" src='../../../public/img/boogerman1.png' alt="monst">
         <div class ="game-lay">
         <header>
             <h3>Use your psychic abilities to read the opponents mind</h3>
@@ -40,5 +53,20 @@
 
           
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script type="text/javascript">
+  let path = anime.path("#svg-path path");
+  anime({
+    targets: "#object1",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 3000,
+    easing: "linear",
+    // loop: false,
+  });
+</script>
 </html>
+        
+</html>
+
         
