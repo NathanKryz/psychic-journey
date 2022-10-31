@@ -1,18 +1,43 @@
 const guessWord = document.getElementById('guessword-el');
 const startButton = document.getElementById('btn-el');
 const timerEl = document.getElementById('time-el');
+let chosenCharacter = JSON.parse(localStorage.getItem('character'));
+console.log(chosenCharacter);
+let chosenMonster = JSON.parse(localStorage.getItem('monster'));
+console.log(chosenMonster)
+
+async function chooseMonster(choice) {
+  reqUrl = choice;
+
+  await fetch(`/api/monsters/${reqUrl}`, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      localStorage.setItem("monster", JSON.stringify(data));
+    });
+};
+
+function init() {
+  chooseMonster(1)
+};
 
 let gameWord = "";
 let wordBlank = 0;
 let win = false;
 let timer;
 let timerCount;
+let choice = 1
 
 
 let fullWord = [];
 let hiddenWord = [];
 
-let words = ['sword', 'shield', 'armor', 'magic', 'staff'];
+let words = chosenMonster.hangmans;
 
 function startFight(event) {
     event.preventDefault();
@@ -25,7 +50,8 @@ function startFight(event) {
 
 function startGuess() {
     randomWord = words[Math.floor(Math.random() * words.length)];
-    fullWord = randomWord.split('');
+    console.log(randomWord)
+    fullWord = randomWord.word.split('');
     wordBlank = fullWord.length;
     console.log(fullWord)
     hiddenWord = [];
@@ -34,6 +60,20 @@ function startGuess() {
         hiddenWord.push("_");
     }   
     guessWord.textContent = hiddenWord.join(' ');
+};
+
+function winRound() {
+  if (randomWord === hiddenWord.join('')) {
+    win = true;
+    guessWord.textContent = "AAARRRGH!!!!";
+  }
+};
+
+function loseRound() {
+  if (randomWord !== hiddenWord.join('')) {
+    win = false;
+    guessWord.textContent = "HAHAHAHAHA!!!";
+  }
 };
 
 
@@ -47,6 +87,8 @@ function checkWin() {
 winGame = () => {
     guessWord.textContent = "You Have Defeated ME!";
     startButton.disabled = false;
+    choice++
+    chooseMonster(choice)
 };
 
 loseGame = () => {
@@ -101,7 +143,7 @@ function checkLetters(letter) {
   });
 
 
-
+  init();
   startButton.addEventListener("click", startFight);
 
 

@@ -1,6 +1,9 @@
 const chooseMage = document.querySelector('.mage');
 const chooseWarrior = document.querySelector('.warrior');
 const chooseRogue = document.querySelector('.rogue');
+const newName = document.getElementById('addName').value;
+console.log(newName + 'hi')
+
 let chosenChar;
 let reqUrl;
 console.log(chooseMage);
@@ -19,12 +22,12 @@ async function chooseCharacter(event, choice) {
     .then(function (data) {
       console.log(data);
       //Render handlebar function
-      localStorage.setItem("character", data);
+      localStorage.setItem("character", JSON.stringify(data));
+      localStorage.setItem("newName", JSON.stringify(newName));
       document.location.replace('/game');
     });
-    console.log(chosenChar);
+};
 
-}
 
 chooseMage.addEventListener('click', function(){chooseCharacter (event, 1)});
 chooseWarrior.addEventListener('click', function(){chooseCharacter (event, 2)});
