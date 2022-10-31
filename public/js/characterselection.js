@@ -19,7 +19,7 @@ async function chooseCharacter(event, choice) {
     .then(function (data) {
       console.log(data);
       //Render handlebar function
-      localStorage.setItem("character", data);
+      localStorage.setItem("character", JSON.stringify(data));
       document.location.replace('/game');
     });
     console.log(chosenChar);
