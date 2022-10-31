@@ -1,8 +1,10 @@
+
 let chosenCharacter = JSON.parse(localStorage.getItem('character'));
 console.log(chosenCharacter);
 let chosenMonster = JSON.parse(localStorage.getItem('monster'));
 console.log(chosenMonster)
 let chosenName = JSON.parse(localStorage.getItem('newName'));
+
 
 const nameDisplay = document.getElementById('charname');
 const classthisDisplay = document.getElementById('classDisplay');
@@ -76,4 +78,3 @@ function checkContinue(hpchar, hpmons) {
     winGame()
   }
 }
-
