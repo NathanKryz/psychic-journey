@@ -49,9 +49,9 @@ function startFight(event) {
 };
 
 function startGuess() {
-    randomWord = words[Math.floor(Math.random() * words.length)];
+    randomWord = words[Math.floor(Math.random() * words.length)].word;
     console.log(randomWord)
-    fullWord = randomWord.word.split('');
+    fullWord = randomWord.split('');
     wordBlank = fullWord.length;
     console.log(fullWord)
     hiddenWord = [];
