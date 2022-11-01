@@ -211,4 +211,126 @@ a {
   z-index: -10;
 }
 
+/* for warrior class room 1 */
+.character4{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top:350px;
+  left:50px;
+  
 
+}
+
+.monster4{
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 250px;
+  left: 1200px;
+  z-index: -10;
+
+
+}
+
+.content4{
+  top: 280px;
+  bottom: 80px;
+  
+
+}
+#object4{
+  
+  position: absolute;
+  top: -300px;
+  left: -0px;
+  /* position: relative; */
+}
+
+#path4{
+  top: 100px;
+  stroke-width: 50px;
+  stroke-dasharray: 12,12;
+}
+
+/* for warrior class room 2 */
+.character5{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top:350px;
+  left:50px;
+  
+
+}
+
+.monster5{
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  top: 90px;
+  left: 65%;
+  z-index: -10;
+
+}
+
+.content5{
+  top: 400px;
+  bottom: 80px;
+  
+
+}
+#object5{
+  
+  /* position: absolute; */
+  top: 50px;
+  left: 300px;
+  position: relative;
+}
+
+#path5{
+  top: 100px;
+  stroke-width: 50px;
+  stroke-dasharray: 12,12;
+}
+
+/* for warrior class room 3 */
+.character6{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top:350px;
+  left:50px;
+  
+
+}
+
+.monster6{
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 250px;
+  left: 1200px;
+  z-index: -10;
+
+}
+
+.content6{
+  top: 280px;
+  bottom: 80px;
+  
+
+}
+#object6{
+  
+  position: absolute;
+  top: -300px;
+  left: -0px;
+  /* position: relative; */
+}
+
+#path6{
+  top: 100px;
+  stroke-width: 50px;
+  stroke-dasharray: 12,12;
+}

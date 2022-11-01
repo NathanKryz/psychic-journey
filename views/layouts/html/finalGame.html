@@ -76,6 +76,48 @@
           <img class ="character3" src='../../../public/img/themage1.png' alt="char">
           <img class ="monster3" src='../../../public/img/eyeballman.png' alt="monst">
           <div class ="game-lay">
+        <!-- for warrior class room 1 -->
+        <div id="#content4">
+            <div id="object4"><img class ="character4" src='../../../public/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path4"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 47 299 L 1051 296 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character4" src='../../../public/img/warrior22.png' alt="char">
+          <img class ="monster4" src='../../../public/img/boogerman1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for warrior class room 2 -->
+        <div id="#content5">
+            <div id="object5"><img class ="character5" src='../../../public/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path5"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 51 300 L 947 298 L 1051 1 L 557 297 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character5" src='../../../public/img/warrior22.png' alt="char">
+          <img class ="monster5" src='../../../public/img/jackomonster1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for warrior class room 3 -->
+        <div id="#content6">
+            <div id="object6"><img class ="character6" src='../../../public/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path6"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 47 299 L 1051 296 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character6" src='../../../public/img/warrior22.png' alt="char">
+          <img class ="monster6" src='../../../public/img/eyeballman.png' alt="monst">
+          <div class ="game-lay">
         <!-- same for all -->
         <header>
             <h3>Use your psychic abilities to read the opponents mind</h3>
@@ -124,7 +166,6 @@
     easing: "linear",
     // loop: false,
   });
-
   //for mage class room 2
   anime({
     targets: "#object2",
@@ -134,13 +175,39 @@
     easing: "linear",
     // loop: false,
   });
-
   //for mage class room 3
   anime({
     targets: "#object3",
     translateX: path("x"),
     translateY: path("y"),
     duration: 800,
+    easing: "linear",
+    // loop: false,
+  });
+//for warrior class room 1
+anime({
+    targets: "#object4",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+// for warrior class room 2
+anime({
+    targets: "#object5",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+// for warrior class room 3
+anime({
+    targets: "#object6",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
     easing: "linear",
     // loop: false,
   });
