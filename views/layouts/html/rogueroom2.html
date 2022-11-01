@@ -7,21 +7,9 @@
     </style>
     <title>Psychic Journey</title>
     <link rel ="shortcut icon" type ="image/png" href="../../../public/img/PJ-logo.png">
-    <link rel="stylesheet" href="../../../public/css/game.css">
+    <link rel="stylesheet" href="../../../public/css/game2rogue.css">
     
     <!---we had linked our css file----->
-    <style type="text/css">
-      #object1 {
-        position: absolute;
-      }
-      #content1 {
-        position: relative;
-      }
-      #path1{
-        stroke-width: 50px;
-        stroke-dasharray: 12,12;
-      }
-    </style>
 </head>
 <body>
     <div class="full-page">
@@ -30,21 +18,19 @@
                 <a href='index.html'>Psychic Journey</a>
             </div>
         </div>
-
         <div id="#content">
-          <div id="object1">🔥</div>
+          <div id="object1"><img class ="character2" src='../../../public/img/rogue.png' alt="char"></div>
           <svg id="svg-path" width="500px" height="200px">
             <path id="path1"
               stroke="#03a9f4"
               fill="none"
-              d="M 3 304 L 999 299 "
+              d="M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z"
             />
           </svg>
         </div>
-        <img class ="character" src='../../../public/img/themage1.png' alt="char">
-        <img class ="monster" src='../../../public/img/boogerman' alt="monst">
+        <img class ="character3" src='../../../public/img/rogue.png' alt="char">
+        <img class ="monster2" src='../../../public/img/jackomonster1.png' alt="monst">
         <div class ="game-lay">
-          
         <header>
             <h3>Use your psychic abilities to read the opponents mind</h3>
             <button id="btn-el">Clairvoyance Activate</button>
@@ -63,23 +49,8 @@
           </main>
           </div>
         </div>
-
-        <div id="charDisplay">
-          <p id="classDisplay" style="color: white;"></p>
-          <p id="hpDisplay" style="color: white;"></p>
-          <p id="attDisplay" style="color: white;"></p>
-          <p id="defDisplay" style="color: white;"></p>
-        </div>
-    
-          <div id="monDisplay">
-          <h4 id="charnameMonster" style="color: white;">GreenSlime</h4>
-          <p id="classDisplayMonster" style="color: white;"></p>
-          <p id="hpDisplayMonster" style="color: white;"></p>
-          <p id="attDisplayMonster" style="color: white;"></p>
-          <p id="defDisplayMonster" style="color: white;"></p>
-        </div>
           <script src="../../../example/hangmanEX.js"></script>
-          
+
           
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -89,10 +60,11 @@
     targets: "#object1",
     translateX: path("x"),
     translateY: path("y"),
-    duration: 800,
+    duration: 5000,
     easing: "linear",
     // loop: false,
   });
 </script>
 </html>
         
+</html>

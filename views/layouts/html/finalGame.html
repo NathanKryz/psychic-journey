@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=MedievalSharp&display=swap');
+    </style>
+    <title>Psychic Journey</title>
+    <link rel ="shortcut icon" type ="image/png" href="../../../public/img/PJ-logo.png">
+    <link rel="stylesheet" href="../../../public/css/game.css">
+    
+  
+    <style type="text/css">
+     /* for mage class */
+      #object1 {
+        position: absolute;
+      }
+      #content1 {
+        position: relative;
+      }
+      #path1{
+        stroke-width: 50px;
+        stroke-dasharray: 12,12;
+      }
+  
+    </style>
+</head>
+<body>
+
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='index.html'>Psychic Journey</a>
+            </div>
+        </div>
+        <!-- for mage class room 1 -->
+        <div id="#content1">
+          <div id="object1">🔥</div>
+          <svg id="svg-path" width="500px" height="200px">
+            <path id="path1"
+              stroke="#03a9f4"
+              fill="none"
+              d="M 3 304 L 999 299 "
+            />
+          </svg>
+        </div>
+        <img class ="character" src='../../../public/img/themage1.png' alt="char">
+        <img class ="monster" src='../../../public/img/boogerman' alt="monst">
+        <div class ="game-lay">
+        <!-- for mage class room 2 -->
+        <div id="#content2">
+            <div id="object2">🔥</div>
+            <svg id="svg-path" width="100px" height="100px">
+              <path id="path2"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 48 351 L 1099 3   "
+              />
+            </svg>
+          </div>
+          
+          <img class ="character2" src='../../../public/img/themage1.png' alt="char">
+          <img class ="monster2" src='../../../public/img/jackomonster1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for mage class room 3 -->
+        <div id="#content3">
+            <div id="object3">🔥</div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path3"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 3 304 L 999 299"
+              />
+            </svg>
+          </div>
+          <img class ="character3" src='../../../public/img/themage1.png' alt="char">
+          <img class ="monster3" src='../../../public/img/eyeballman.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for warrior class room 1 -->
+        <div id="#content4">
+            <div id="object4"><img class ="character4" src='../../../public/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path4"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 47 299 L 1051 296 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character4" src='../../../public/img/warrior22.png' alt="char">
+          <img class ="monster4" src='../../../public/img/boogerman1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for warrior class room 2 -->
+        <div id="#content5">
+            <div id="object5"><img class ="character5" src='../../../public/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path5"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 51 300 L 947 298 L 1051 1 L 557 297 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character5" src='../../../public/img/warrior22.png' alt="char">
+          <img class ="monster5" src='../../../public/img/jackomonster1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for warrior class room 3 -->
+        <div id="#content6">
+            <div id="object6"><img class ="character6" src='../../../public/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path6"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 47 299 L 1051 296 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character6" src='../../../public/img/warrior22.png' alt="char">
+          <img class ="monster6" src='../../../public/img/eyeballman.png' alt="monst">
+          <div class ="game-lay">
+        <!-- same for all -->
+        <header>
+            <h3>Use your psychic abilities to read the opponents mind</h3>
+            <button id="btn-el">Clairvoyance Activate</button>
+          </header>
+          
+        <div class ="font-lay">
+          <main>
+            <section>
+              <div id="guessword-el">Can You Defeat Me?</div>
+            </section>
+        
+            <section>
+              <div>Time Left:</div>
+              <div id="time-el">30</div>
+            </section>
+          </main>
+          </div>
+        </div>
+
+        <div id="charDisplay">
+          <p id="classDisplay" style="color: white;"></p>
+          <p id="hpDisplay" style="color: white;"></p>
+          <p id="attDisplay" style="color: white;"></p>
+          <p id="defDisplay" style="color: white;"></p>
+        </div>
+    
+        <div id="monDisplay">
+          <p id="classDisplayMonster" style="color: white;"></p>
+          <p id="hpDisplayMonster" style="color: white;"></p>
+          <p id="attDisplayMonster" style="color: white;"></p>
+          <p id="defDisplayMonster" style="color: white;"></p>
+        </div>
+        <!-- same for all end -->
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script type="text/javascript">
+  let path = anime.path("#svg-path path");
+  // for mage class room 1
+  anime({
+    targets: "#object1",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 800,
+    easing: "linear",
+    // loop: false,
+  });
+  //for mage class room 2
+  anime({
+    targets: "#object2",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 800,
+    easing: "linear",
+    // loop: false,
+  });
+  //for mage class room 3
+  anime({
+    targets: "#object3",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 800,
+    easing: "linear",
+    // loop: false,
+  });
+//for warrior class room 1
+anime({
+    targets: "#object4",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+// for warrior class room 2
+anime({
+    targets: "#object5",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+// for warrior class room 3
+anime({
+    targets: "#object6",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+</script>
+</html>

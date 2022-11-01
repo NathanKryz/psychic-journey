@@ -10,7 +10,7 @@
         "class": "Warrior",
         "design": "",
         "hitpoints": 350,
-        "attack": 30,
+        "attack": 50,
         "defense": 60
     },
     {

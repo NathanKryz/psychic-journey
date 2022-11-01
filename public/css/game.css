@@ -108,8 +108,7 @@ a
     background: gray;
 }
 
-/* Character vs Monster */
-.character2{
+
     position: absolute;
     width: 500px;
     height: 500px;
@@ -119,7 +118,7 @@ a
 
 }
 
-.monster2{
+.monster{
     position: absolute;
     width: 600px;
     height: 600px;
@@ -131,7 +130,7 @@ a
 
 
 
-.content{
+#content{
     top: 280px;
     bottom: 80px;
     
@@ -151,3 +150,13 @@ a
     stroke-dasharray: 12,12;
   }
 
+
+#charDisplay {
+    margin-top: -100px;
+    margin-left: 50px;
+}
+
+#monDisplay {
+    margin-top: -92px;
+    margin-left: 800px
+}

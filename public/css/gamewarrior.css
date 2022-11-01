@@ -8,7 +8,7 @@
 {
     height: 100%;
 	width: 100%;
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom3.gif);
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom1.gif);
 	background-position: center;
 	background-size: cover;
 	position: absolute;
@@ -76,7 +76,6 @@ a
 /* GAME LAYOUT */
 .game-lay{
     font-size: 30px;
-    text-shadow: 10px purple;
     color: white;
     position: absolute;
 	left: 30%;
@@ -108,6 +107,7 @@ a
     left: 260px;
     background: gray;
 }
+
 /* Character vs Monster */
 .character2{
     position: absolute;
@@ -126,6 +126,7 @@ a
     top: 250px;
     left: 1200px;
     z-index: -10;
+
 
 }
 

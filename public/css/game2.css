@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.full-page
+.full-page2
 {
     height: 100%;
 	width: 100%;
@@ -149,3 +149,13 @@ a
     stroke-dasharray: 12,12;
   }
 
+
+  #charDisplay {
+    margin-top: -100px;
+    margin-left: 50px;
+}
+
+#monDisplay {
+    margin-top: -92px;
+    margin-left: 800px
+}
