@@ -6,6 +6,7 @@ const characterData = require('./characters.json');
 const monsterData = require('./monster.json');
 const hangmanWords = require('./words.json');
 
+// seeding all .json data into sql database
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 

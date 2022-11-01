@@ -2,6 +2,7 @@ const router = require('express').Router();
 // const { response } = require('express');
 const { Hangman } = require('../../models');
 
+// get function for recieving a specific word using id
 router.get('/:id', async (req, res) => {
     try {
         const chosenWords = await Hangman.findByPk(req.params.id);
@@ -15,7 +16,7 @@ router.get('/:id', async (req, res) => {
       }
 });
 
-
+//get function for recieving all words
 router.get('/', async (req, res) => {
     try {
         const chosenWords = await Hangman.findAll();

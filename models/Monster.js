@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Monster extends Model {}
-
+// creating monster model for sql tables
 Monster.init(
     {
         id: {

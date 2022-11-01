@@ -4,7 +4,7 @@ const chooseRogue = document.querySelector('.rogue');
 
 
 
-
+// function to choose character and pushing chosen charater into local storage 
 let chosenChar;
 let reqUrl;
 console.log(chooseMage);

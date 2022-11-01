@@ -24,6 +24,8 @@ console.log(chosenCharacter);
  let chosenMonster;
 // console.log(chosenMonster);
 // const nameDisplay = document.getElementById('charname');
+
+// manipulating DOM to display character and monster stats
 const classthisDisplay = document.getElementById('classDisplay');
 const hitpDisplay = document.getElementById('hpDisplay');
 const attaDisplay = document.getElementById('attDisplay');
@@ -49,7 +51,7 @@ let fullWord = [];
 let hiddenWord = [];
 
 // let words = chosenMonster.hangmans;
-
+// initializing first monster to be chosen when starting game and saving data into local storage
 async function chooseMonster(choice) {
   console.log("Monster chosen");
     reqUrl = choice;
@@ -70,7 +72,7 @@ async function chooseMonster(choice) {
 
 chooseMonster(1)
 
-
+// function to display character stats 
 let displayCharacter = function (data) {
    
     let classDisplay = data.class;
@@ -86,9 +88,10 @@ let displayCharacter = function (data) {
     defeDisplay.textContent = defenseDisplay;
     newHPCharacter = data.hitpoints;
  };
-
+// function ran with data pulled form local storage
  displayCharacter(chosenCharacter);
 
+ // function to display monster stats
  let displayMonster = function (data) {
    
     let classDisplay = data.class;
@@ -105,8 +108,10 @@ let displayCharacter = function (data) {
     newHPMonster = data.hitpoints;
  };
 
+ // function to display chosen monster with data pulled from local storage
   displayMonster(JSON.parse(localStorage.getItem('monster')));
 
+  // function to being the game 
  function startFight(chosenMonster) {
   console.log("You started a fight");
   // console.log(chosenMonster);
@@ -119,6 +124,7 @@ let displayCharacter = function (data) {
   startTimer();
 };
 
+// function to choose a random word from database and split it into pieces and hide them
 function startGuess(words) {
     randomWord = words[Math.floor(Math.random() * words.length)].word;
     console.log(randomWord)
@@ -133,6 +139,7 @@ function startGuess(words) {
     guessWord.textContent = hiddenWord.join(' ');
 };
 
+// function to run timerr when game starts and calls attack and continue functions depending on situation
  function startTimer() {
     timer = setInterval(async function() {
         timerCount--;
@@ -155,6 +162,7 @@ function startGuess(words) {
     }, 1000)
 };
 
+// function to check the correct letter of the game and poopulate them on screen, also to decrease time if incoreect keydown
 function checkLetters(letter) {
     let letterInWord = false;
     for (var i = 0; i < wordBlank; i++) {
@@ -175,6 +183,7 @@ function checkLetters(letter) {
     }
 };
 
+// event listener for the keydown when playing the game
 document.addEventListener("keydown", function(event) {
    
     let key = event.key.toLowerCase();
@@ -186,6 +195,7 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+// checks if player won game 
 async function checkWin() {
   if (randomWord === hiddenWord.join('')) {
     console.log("Winner is you");
@@ -194,6 +204,7 @@ async function checkWin() {
   }
 };
 
+// function to change hitpoints of monster depending on character stats attack
 let charAttack = async function (character, monster) {
    
       newHPMonster = (newHPMonster - (character.attack - monster.defense))
@@ -242,12 +253,14 @@ let charAttack = async function (character, monster) {
       }
 };
 
+// function to change hitpoints of character depending on monster stats attack
 let monAttack = function (character, monster) {
 
       newHPCharacter = (newHPCharacter - (monster.attack - character.defense))
       hitpDisplay.textContent = newHPCharacter;
 };
 
+// function to check if game should continue after each attack
 async function checkContinue(hpchar, hpmons) {
     if (hpchar > 0 && hpmons > 0) {
       console.log(chosenMonster);
@@ -258,12 +271,8 @@ async function checkContinue(hpchar, hpmons) {
       loseGame()
     }
 };
-// winGame = () => {
-//     guessWord.textContent = "You Have Defeated ME!";
-//     startButton.disabled = false;
-//     choice++
-//     chooseMonster(choice)
-// };
+
+// function to cycle into next boss fight when player defeats a monster
 winGame = async () => {
   guessWord.textContent = "You Have Defeated ME!";
   startButton.disabled = false;
@@ -303,7 +312,7 @@ winGame = async () => {
  await chooseMonster(choice)
 };
 
-
+// function to send player back to character selection screen if the lose the game
 loseGame = async () => {
     guessWord.textContent = "You Will Never Defeat ME!";
     startButton.disabled = true;  
@@ -321,6 +330,7 @@ async function startAll(event) {
   startFight(chosenMonster)
 } 
 
+// function to start the gameplay mechanics
 startButton.addEventListener("click", startAll);
 
 

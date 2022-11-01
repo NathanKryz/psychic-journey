@@ -2,6 +2,7 @@ const router = require('express').Router();
 // const { response } = require('express');
 const { Monster, Hangman } = require('../../models');
 
+// get function for all monsters
 router.get('/', async (req, res) => {
     try {
         const chosenMonster = await Monster.findAll();
@@ -15,6 +16,7 @@ router.get('/', async (req, res) => {
       }
 });
 
+// get function for specific monster using the id
 router.get('/:id', async (req, res) => {
   try {
       const chosenMonster = await Monster.findByPk(req.params.id, {

@@ -2,6 +2,7 @@ const router = require('express').Router();
 // const { response } = require('express');
 const { Character } = require('../../models');
 
+// get function for specific character using the id
 router.get('/:id', async (req, res) => {
     try {
         const chosenCharacter = await Character.findByPk(req.params.id);
@@ -16,7 +17,7 @@ router.get('/:id', async (req, res) => {
       }
 });
 
-
+// get function for all characters
 router.get('/', async (req, res) => {
   try {
       const chosenCharacter = await Character.findAll();
