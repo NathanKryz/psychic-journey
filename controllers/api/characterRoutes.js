@@ -5,6 +5,7 @@ const { Character } = require('../../models');
 router.get('/:id', async (req, res) => {
     try {
         const chosenCharacter = await Character.findByPk(req.params.id);
+        req.session.currentChar = req.params.id;
         if (!chosenCharacter) {
           res.status(404).json({ message: 'This character does not exist' });
         //   response.render('homepage');

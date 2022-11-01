@@ -8,14 +8,14 @@
     },
     {
         "class": "Warrior",
-        "design": "",
+        "design": "/img/warrior22.png",
         "hitpoints": 350,
         "attack": 50,
         "defense": 60
     },
     {
         "class": "Rogue",
-        "design": "",
+        "design": "/img/rogue.png",
         "hitpoints": 220,
         "attack": 60,
         "defense": 45

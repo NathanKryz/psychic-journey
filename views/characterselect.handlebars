@@ -6,8 +6,8 @@
   <div class="carousel-controls">
     <ol class="carousel-indicators">
       <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url({{characters.0.design}})"></li>
-      <li data-target="#carousel" data-slide-to="1" style="background-image:url('/img/placeholder.png')"></li>
-      <li data-target="#carousel" data-slide-to="2" style="background-image:url('/img/placeholder.png')"></li>
+      <li data-target="#carousel" data-slide-to="1" style="background-image:url({{characters.1.design}})"></li>
+      <li data-target="#carousel" data-slide-to="2" style="background-image:url({{characters.2.design}})"></li>
       
     </ol>
     <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -20,24 +20,24 @@
   <div class="carousel-inner">
     <div class="carousel-item active" style="background-image:url({{characters.0.design}})">
       <div class="container">
-        <input id="addName" placeholder="Add Character Name"></input>
+        <input type='text' placeholder="Add Character Name"></input>
          <h2>{{characters.0.class}}</h2>
          <p>HP: {{characters.0.hitpoints}} ATTACK: {{characters.0.attack}} DEFENSE: {{characters.0.defense}} </p>
          <button class="mage"id="btn-el" type="Submit"> Start Adventure!</button>
       </div>
       
     </div>
-    <div class="carousel-item" style="background-image:url('/img/placeholder.png')">
+    <div class="carousel-item" style="background-image:url({{characters.1.design}})">
       <div class="container">
-        <input placeholder="Add Character Name"> </input>
+        <input type='text' placeholder="Add Character Name"> </input>
          <h2>{{characters.1.class}}</h2>
          <p>HP: {{characters.1.hitpoints}} ATTACK: {{characters.1.attack}} DEFENSE: {{characters.1.defense}}</p>
          <button class="warrior"id="btn-el" type="Submit"> Start Adventure!</button>
       </div>
     </div>
-    <div class="carousel-item" style="background-image:url('/img/placeholder.png')">
+    <div class="carousel-item" style="background-image:url({{characters.2.design}})">
       <div class="container">
-        <input placeholder="Add Character Name"> </input>
+        <input type='text' placeholder="Add Character Name"> </input>
          <h2>{{characters.2.class}}</h2>
          <p>HP: {{characters.2.hitpoints}} ATTACK: {{characters.2.attack}} DEFENSE: {{characters.2.defense}}</p>
          <button class="rogue" id="btn-el" type="Submit"> Start Adventure!</button>
