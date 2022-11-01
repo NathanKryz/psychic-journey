@@ -9,8 +9,9 @@
     <link rel ="shortcut icon" type ="image/png" href="../../../public/img/PJ-logo.png">
     <link rel="stylesheet" href="../../../public/css/game.css">
     
-    <!---we had linked our css file----->
+  
     <style type="text/css">
+     /* for mage class */
       #object1 {
         position: absolute;
       }
@@ -21,17 +22,19 @@
         stroke-width: 50px;
         stroke-dasharray: 12,12;
       }
+  
     </style>
 </head>
 <body>
+
     <div class="full-page">
         <div class="navbar">
             <div>
                 <a href='index.html'>Psychic Journey</a>
             </div>
         </div>
-
-        <div id="#content">
+        <!-- for mage class room 1 -->
+        <div id="#content1">
           <div id="object1">🔥</div>
           <svg id="svg-path" width="500px" height="200px">
             <path id="path1"
@@ -44,7 +47,36 @@
         <img class ="character" src='../../../public/img/themage1.png' alt="char">
         <img class ="monster" src='../../../public/img/boogerman' alt="monst">
         <div class ="game-lay">
+        <!-- for mage class room 2 -->
+        <div id="#content2">
+            <div id="object2">🔥</div>
+            <svg id="svg-path" width="100px" height="100px">
+              <path id="path2"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 48 351 L 1099 3   "
+              />
+            </svg>
+          </div>
           
+          <img class ="character2" src='../../../public/img/themage1.png' alt="char">
+          <img class ="monster2" src='../../../public/img/jackomonster1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for mage class room 3 -->
+        <div id="#content3">
+            <div id="object3">🔥</div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path3"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 3 304 L 999 299"
+              />
+            </svg>
+          </div>
+          <img class ="character3" src='../../../public/img/themage1.png' alt="char">
+          <img class ="monster3" src='../../../public/img/eyeballman.png' alt="monst">
+          <div class ="game-lay">
+        <!-- same for all -->
         <header>
             <h3>Use your psychic abilities to read the opponents mind</h3>
             <button id="btn-el">Clairvoyance Activate</button>
@@ -71,20 +103,19 @@
           <p id="defDisplay" style="color: white;"></p>
         </div>
     
-          <div id="monDisplay">
-          <h4 id="charnameMonster" style="color: white;">GreenSlime</h4>
+        <div id="monDisplay">
           <p id="classDisplayMonster" style="color: white;"></p>
           <p id="hpDisplayMonster" style="color: white;"></p>
           <p id="attDisplayMonster" style="color: white;"></p>
           <p id="defDisplayMonster" style="color: white;"></p>
         </div>
-          <script src="../../../example/hangmanEX.js"></script>
-          
-          
+        <!-- same for all end -->
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script type="text/javascript">
   let path = anime.path("#svg-path path");
+  // for mage class room 1
   anime({
     targets: "#object1",
     translateX: path("x"),
@@ -93,6 +124,25 @@
     easing: "linear",
     // loop: false,
   });
+
+  //for mage class room 2
+  anime({
+    targets: "#object2",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 800,
+    easing: "linear",
+    // loop: false,
+  });
+
+  //for mage class room 3
+  anime({
+    targets: "#object3",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 800,
+    easing: "linear",
+    // loop: false,
+  });
 </script>
 </html>
-        

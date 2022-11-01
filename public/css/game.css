@@ -109,7 +109,7 @@ a
 }
 
 /* Character vs Monster */
-.character2{
+.character{
     position: absolute;
     width: 500px;
     height: 500px;
@@ -119,7 +119,7 @@ a
 
 }
 
-.monster2{
+.monster{
     position: absolute;
     width: 600px;
     height: 600px;
@@ -131,7 +131,7 @@ a
 
 
 
-.content{
+#content{
     top: 280px;
     bottom: 80px;
     
