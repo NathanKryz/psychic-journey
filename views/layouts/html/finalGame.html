@@ -118,6 +118,48 @@
           <img class ="character6" src='../../../public/img/warrior22.png' alt="char">
           <img class ="monster6" src='../../../public/img/eyeballman.png' alt="monst">
           <div class ="game-lay">
+        <!-- for rogue class room 1 -->
+        <div id="#content7">
+            <div id="object7"><img class ="character7" src='../../../public/img/rogue.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path7"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character7" src='../../../public/img/rogue.png' alt="char">
+          <img class ="monster7" src='../../../public/img/boogerman1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for rogue class room 2 -->
+        <div id="#content8">
+            <div id="object8"><img class ="character8" src='../../../public/img/rogue.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path8"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character8" src='../../../public/img/rogue.png' alt="char">
+          <img class ="monster8" src='../../../public/img/jackomonster1.png' alt="monst">
+          <div class ="game-lay">
+        <!-- for rogue class room 3 -->
+        <div id="#content9">
+            <div id="object9"><img class ="character9" src='../../../public/img/rogue.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="path9"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character9" src='../../../public/img/rogue.png' alt="char">
+          <img class ="monster9" src='../../../public/img/eyeballman.png' alt="monst">
+          <div class ="game-lay">
         <!-- same for all -->
         <header>
             <h3>Use your psychic abilities to read the opponents mind</h3>
@@ -211,5 +253,33 @@ anime({
     easing: "linear",
     // loop: false,
   });
+// for rogue class room 1
+anime({
+    targets: "#object7",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+// for rogue class room 2
+anime({
+    targets: "#object8",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+// for rogue class room 3
+anime({
+    targets: "#object9",
+    translateX: path("x"),
+    translateY: path("y"),
+    duration: 5000,
+    easing: "linear",
+    // loop: false,
+  });
+
 </script>
 </html>

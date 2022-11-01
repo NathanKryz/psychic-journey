@@ -191,7 +191,6 @@ a {
   z-index: -10;
 }
 
-
 /* for mage class room 3 */
 
 .character3 {
@@ -212,125 +211,211 @@ a {
 }
 
 /* for warrior class room 1 */
-.character4{
+.character4 {
   position: absolute;
   width: 500px;
   height: 500px;
-  top:350px;
-  left:50px;
-  
-
+  top: 350px;
+  left: 50px;
 }
 
-.monster4{
+.monster4 {
   position: absolute;
   width: 600px;
   height: 600px;
   top: 250px;
   left: 1200px;
   z-index: -10;
-
-
 }
 
-.content4{
+.content4 {
   top: 280px;
   bottom: 80px;
-  
-
 }
-#object4{
-  
+#object4 {
   position: absolute;
   top: -300px;
   left: -0px;
   /* position: relative; */
 }
 
-#path4{
+#path4 {
   top: 100px;
   stroke-width: 50px;
-  stroke-dasharray: 12,12;
+  stroke-dasharray: 12, 12;
 }
 
 /* for warrior class room 2 */
-.character5{
+.character5 {
   position: absolute;
   width: 500px;
   height: 500px;
-  top:350px;
-  left:50px;
-  
-
+  top: 350px;
+  left: 50px;
 }
 
-.monster5{
+.monster5 {
   position: absolute;
   width: 650px;
   height: 650px;
   top: 90px;
   left: 65%;
   z-index: -10;
-
 }
 
-.content5{
+.content5 {
   top: 400px;
   bottom: 80px;
-  
-
 }
-#object5{
-  
+#object5 {
   /* position: absolute; */
   top: 50px;
   left: 300px;
   position: relative;
 }
 
-#path5{
+#path5 {
   top: 100px;
   stroke-width: 50px;
-  stroke-dasharray: 12,12;
+  stroke-dasharray: 12, 12;
 }
 
 /* for warrior class room 3 */
-.character6{
+.character6 {
   position: absolute;
   width: 500px;
   height: 500px;
-  top:350px;
-  left:50px;
-  
-
+  top: 350px;
+  left: 50px;
 }
 
-.monster6{
+.monster6 {
   position: absolute;
   width: 600px;
   height: 600px;
   top: 250px;
   left: 1200px;
   z-index: -10;
-
 }
 
-.content6{
+.content6 {
   top: 280px;
   bottom: 80px;
-  
-
 }
-#object6{
-  
+#object6 {
   position: absolute;
   top: -300px;
   left: -0px;
   /* position: relative; */
 }
 
-#path6{
+#path6 {
   top: 100px;
   stroke-width: 50px;
-  stroke-dasharray: 12,12;
+  stroke-dasharray: 12, 12;
+}
+
+/* for rogue class room 1 */
+.character7 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 350px;
+  left: 50px;
+}
+
+.monster7 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 250px;
+  left: 1200px;
+  z-index: -10;
+}
+
+.content7 {
+  top: 280px;
+  bottom: 80px;
+}
+#object7 {
+  position: absolute;
+  top: 50px;
+  left: -0px;
+  /* position: relative; */
+}
+
+#path7 {
+  top: 100px;
+  stroke-width: 50px;
+  stroke-dasharray: 12, 12;
+}
+
+/* for rogue class room 2 */
+.character8 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 350px;
+  left: 50px;
+}
+
+.monster8 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 250px;
+  left: 1200px;
+  z-index: -10;
+}
+
+.content8 {
+  top: 280px;
+  bottom: 80px;
+}
+#object8 {
+  position: absolute;
+  top: 50px;
+  left: -0px;
+  /* position: relative; */
+}
+
+#path8 {
+  top: 100px;
+  stroke-width: 50px;
+  stroke-dasharray: 12, 12;
+}
+
+/* for rogue class room 3 */
+.character9 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 350px;
+  left: 50px;
+}
+
+.monster9 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 250px;
+  left: 1200px;
+  z-index: -10;
+}
+
+.content9 {
+  top: 280px;
+  bottom: 80px;
+}
+#object9 {
+  position: absolute;
+  top: 50px;
+  left: -0px;
+  /* position: relative; */
+}
+
+#path9 {
+  top: 100px;
+  stroke-width: 50px;
+  stroke-dasharray: 12, 12;
 }
