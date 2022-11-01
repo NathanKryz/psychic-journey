@@ -123,13 +123,11 @@ a
     position: absolute;
     width: 600px;
     height: 600px;
-    top: 350px;
-    left: 1300px;
-    z-index: -3;
+    top: 250px;
+    left: 1200px;
+    z-index: -10;
 
 }
-
-
 
 .content{
     top: 280px;
@@ -138,11 +136,11 @@ a
 
 }
 #object1{
-    font-size: 300px;
+    
     position: absolute;
-    top: 60px;
-    left: 300px;
-    position: relative;
+    top: -300px;
+    left: -0px;
+    /* position: relative; */
 }
 
 #path1{
@@ -150,4 +148,3 @@ a
     stroke-width: 50px;
     stroke-dasharray: 12,12;
   }
-
