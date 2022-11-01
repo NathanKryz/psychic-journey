@@ -62,7 +62,7 @@ let displayCharacter = function (data) {
     let attackDisplay = data.attack;
     let defenseDisplay = data.defense;
  
-    // nameDisplay.textContent = chosenName;
+    //  nameDisplay.textContent = JSON.parse(localStorage.getItem("newName"));
     classthisDisplay.textContent = classDisplay;
     hitpDisplay.textContent = hitpointsDisplay;
     attaDisplay.textContent = attackDisplay;
