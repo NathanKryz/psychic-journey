@@ -33,6 +33,7 @@ router.get('/characters', withAuth, async (req, res) => {
 router.get('/game', withAuth, async (req, res) => {
     try {
         console.log("Rendering gameplay page #1");
+        var scripts = [{ script: `https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js` }];
         req.session.current_page = true;
         req.session.activate_anims = true;
         if (req.session.currentChar == 1){
@@ -41,6 +42,7 @@ router.get('/game', withAuth, async (req, res) => {
                 logged_in: req.session.logged_in,
                 game_page: req.session.current_page,
                 mage_animation: req.session.activate_anims,
+                scripts: scripts,
             });
         }
         else if (req.session.currentChar == 2){
@@ -49,6 +51,7 @@ router.get('/game', withAuth, async (req, res) => {
                 logged_in: req.session.logged_in,
                 game_page: req.session.current_page,
                 warrior_animation: req.session.activate_anims,
+                scripts: scripts,
             });
         }
         else if (req.session.currentChar == 3){
@@ -57,6 +60,7 @@ router.get('/game', withAuth, async (req, res) => {
                 logged_in: req.session.logged_in,
                 game_page: req.session.current_page,
                 rogue_animation: req.session.activate_anims,
+                scripts: scripts,
             });
         }
         // res.render('game', {

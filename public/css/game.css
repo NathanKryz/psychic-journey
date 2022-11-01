@@ -24,21 +24,25 @@
     padding-left: 50px;
     padding-right: 30px;
     padding-top: 50px;
+    z-index: 10;
 }
 nav
 {
     flex: 1;
     text-align: right;
+    z-index: 9;
 }
 nav ul 
 {
     display: inline-block;
     list-style: none;
+    z-index: 9;
 }
 nav ul li
 {
     display: inline-block;
     margin-right: 70px;
+    z-index: 9;
 } 
 
 nav ul li a
@@ -47,6 +51,7 @@ nav ul li a
     font-size: 20px;
     color: white;
     font-family: sans-serif;
+    z-index: 9;
 }
 nav ul li button
 {
@@ -57,20 +62,24 @@ nav ul li button
     background: transparent;
     cursor: pointer;
     font-family: sans-serif;
+    z-index: 9;
 }
 nav ul li button:hover
 {
     color: aqua;
+    z-index: 9;
 }
 nav ul li a:hover
 {
     color: aqua;
+    z-index: 9;
 }
 a
 {
     text-decoration: none;
     color: palevioletred;
     font-size: 28px;
+    z-index: 9;
 }
 
 /* GAME LAYOUT */
@@ -109,14 +118,7 @@ a
 }
 
 
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    top:350px;
-    left:50px;
-    
 
-}
 
 .monster{
     position: absolute;

@@ -19,14 +19,50 @@
           </main>
           </div>
         </div>
-        {{#if mage_animation}}
-
-        {{/if}}
+          {{#if mage_animation}}
+            <div id="#content1">
+          <div id="object1">🔥</div>
+          <svg id="svg-path" width="500px" height="200px">
+            <path id="pathmage"
+              stroke="#03a9f4"
+              fill="none"
+              d="M 3 304 L 999 299 "
+            />
+          </svg>
+        </div>
+        <img class ="character" src='/img/themage1.png' alt="char">
+        <img class ="monster" src='/img/boogerman' alt="monst">
+        <div class ="game-lay">
+        {{/if}} 
         {{#if warrior_animation}}
-
+        <div id="#content4">
+            <div id="object4"><img class ="character4" src='/img/warrior22.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="pathwar"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 47 299 L 1051 296 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character4" id="origWar" src='/img/warrior22.png' alt="char">
+          <img class ="monster" src='/img/boogerman1.png' alt="monst">
+          <div class ="game-lay">
         {{/if}}
         {{#if rogue_animation}}
-
+        <div id="#content7">
+            <div id="object7"><img class ="character7" src='/img/rogue.png' alt="char"></div>
+            <svg id="svg-path" width="500px" height="200px">
+              <path id="pathrogue"
+                stroke="#03a9f4"
+                fill="none"
+                d="M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z"
+              />
+            </svg>
+          </div>
+          <img class ="character7" id="origRogue" src='/img/rogue.png' alt="char">
+          <img class ="monster" src='/img/boogerman1.png' alt="monst">
+          <div class ="game-lay">
         {{/if}}
     </div> 
     <div>
@@ -46,8 +82,10 @@
     </div>
           {{!-- <script src="/js/fight.js"></script> --}}
           <script src="/js/bootstrap.bundle.min.js"></script>
-          <script src="/js/fighthangman.js"></script>
-          
+         {{#each scripts}}
+        <script src="{{script}}"></script>
+        {{/each}}
+        <script src="/js/fighthangman.js"></script>
 
     {{!-- </div> --}}
           

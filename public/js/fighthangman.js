@@ -2,18 +2,34 @@ const guessWord = document.getElementById('guessword-el');
 const startButton = document.getElementById('btn-el');
 const timerEl = document.getElementById('time-el');
 const background = document.querySelector('.full-page');
+const monsterRender = document.querySelector('.monster');
+let fireball = document.getElementById('object1');
+let fireAim = document.getElementById('pathmage');
+let warCharge = document.getElementById('object4');
+let warAim = document.getElementById('pathwar');
+let origWar = document.getElementById('origWar');
+let rogueFlip = document.getElementById('object7');
+let roguePath = document.getElementById('pathrogue');
+let origRogue = document.getElementById('origRogue');
 let chosenCharacter = JSON.parse(localStorage.getItem('character'));
+if (chosenCharacter.id == 1){
+fireball.setAttribute("style", "opacity: 0;");
+} else if (chosenCharacter.id == 2){
+warCharge.setAttribute("style", "opacity: 0;");
+} else if (chosenCharacter.id == 3){
+rogueFlip.setAttribute("style", "opacity: 0;");
+}
+// import {anime} from 'animejs/lib/anime.es.js';
 console.log(chosenCharacter);
  let chosenMonster;
 // console.log(chosenMonster);
-
-const nameDisplay = document.getElementById('charname');
+// const nameDisplay = document.getElementById('charname');
 const classthisDisplay = document.getElementById('classDisplay');
 const hitpDisplay = document.getElementById('hpDisplay');
 const attaDisplay = document.getElementById('attDisplay');
 const defeDisplay = document.getElementById('defDisplay');
 
-const nameDisplayMonster = document.getElementById('charnameMonster');
+// const nameDisplayMonster = document.getElementById('charnameMonster');
 const classthisDisplayMonster = document.getElementById('classDisplayMonster');
 const hitpDisplayMonster = document.getElementById('hpDisplayMonster');
 const attaDisplayMonster = document.getElementById('attDisplayMonster');
@@ -117,8 +133,8 @@ function startGuess(words) {
     guessWord.textContent = hiddenWord.join(' ');
 };
 
-function startTimer() {
-    timer = setInterval(function() {
+ function startTimer() {
+    timer = setInterval(async function() {
         timerCount--;
         timerEl.textContent = timerCount;
         if (timerCount >= 0) {
@@ -175,10 +191,52 @@ async function checkWin() {
   }
 };
 
-let charAttack = function (character, monster) {
+let charAttack = async function (character, monster) {
    
       newHPMonster = (newHPMonster - (character.attack - monster.defense))
       hitpDisplayMonster.textContent = newHPMonster;
+      if (chosenCharacter.id == 1)
+      {
+        fireball.setAttribute("style", "opacity: 1;");
+       anime({
+          targets: "#object1",
+          translateX: path("x"),
+          translateY: path("y"),
+          duration: 800,
+          easing: "linear",
+          // loop: false,
+        });
+        await setTimeout(() =>  {fireball.setAttribute("style", "opacity: 0;");}, 1000);
+      };
+      if (chosenCharacter.id == 2)
+      {
+        warCharge.setAttribute("style", "opacity: 1;");
+        origWar.setAttribute("style", "opacity: 0;");
+        anime({
+          targets: "#object4",
+          translateX: path("x"),
+          translateY: path("y"),
+          duration: 2500,
+          easing: "linear",
+          // loop: false,
+        });
+        await setTimeout(() =>  {warCharge.setAttribute("style", "opacity: 0;"); origWar.setAttribute("style", "opacity: 1");}, 3000);
+        
+      }
+      if (chosenCharacter.id == 3)
+      {
+        rogueFlip.setAttribute("style", "opacity: 1;");
+        origRogue.setAttribute("style", "opacity: 0;");
+        anime({
+          targets: "#object7",
+          translateX: path("x"),
+          translateY: path("y"),
+          duration: 2500,
+          easing: "linear",
+          // loop: false,
+        });
+        await setTimeout(() =>  {rogueFlip.setAttribute("style", "opacity: 0;"); origRogue.setAttribute("style", "opacity: 1");}, 3000);
+      }
 };
 
 let monAttack = function (character, monster) {
@@ -189,7 +247,6 @@ let monAttack = function (character, monster) {
 
 function checkContinue(hpchar, hpmons) {
     if (hpchar > 0 && hpmons > 0) {
-      console.log(req.session.currentChar);
       console.log(chosenMonster);
       startFight(chosenMonster)
     } else if (hpmons <= 0){
@@ -215,6 +272,30 @@ winGame = async () => {
     // Function for finishing the game?
     return;
   }
+  if (choice == 2){
+  //monsterRender.setAttribute("src", "/img/jackomonster1.png;");
+  monsterRender.src = "/img/jackomonster1.png";
+  monsterRender.setAttribute("style", "width: 650px; height: 650px; top: 90px; left: 65%;");
+  if (chosenCharacter.id == 1){
+  fireAim.setAttribute("d", "M 48 351 L 1099 3   ");
+  } else if (chosenCharacter.id == 2){
+  warAim.setAttribute("d", "M 51 300 L 947 298 L 1051 1 L 557 297 Z");
+  } else if (chosenCharacter.id == 3){
+  roguePath.setAttribute("d", "M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z");
+  }
+  }
+  if (choice == 3){
+    // monsterRender.setAttribute("src", "/img/eyeballman.png;");
+    monsterRender.src = "/img/eyeballman.png";
+    monsterRender.setAttribute("style", "width: 600px; height 600px; top: 250px; left: 1200px;");
+    if (chosenCharacter.id == 1) {
+    fireAim.setAttribute("d", "M 3 304 L 999 299");
+    } else if (chosenCharacter.id == 2){
+    warAim.setAttribute("d", "M 47 299 L 1051 296 Z");
+    } else if (chosenCharacter.id == 3){
+    roguePath.setAttribute("d", "M 51 300 L 947 298 A 50 50 0 1 1 1051 1 L 557 297 Z");
+    }
+  }
   background.setAttribute("style", `background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bossroom${choice}.gif);`);
  await chooseMonster(choice)
 };
@@ -227,6 +308,7 @@ loseGame = () => {
 
 async function startAll(event) {
   event.preventDefault();
+
   // chooseMonster(choice);
   chosenMonster = JSON.parse(localStorage.getItem('monster'));
   //console.log(chosenMonster);
@@ -238,3 +320,85 @@ async function startAll(event) {
 startButton.addEventListener("click", startAll);
 
 
+let path = anime.path("#svg-path path");
+  // for mage class room 1
+  // anime({
+  //   targets: "#object1",
+  //   translateX: path("x"),
+  //   translateY: path("y"),
+  //   duration: 800,
+  //   easing: "linear",
+  //   // loop: false,
+  // });
+  //for mage class room 2
+  // anime({
+  //   targets: "#object2",
+  //   translateX: path("x"),
+  //   translateY: path("y"),
+  //   duration: 800,
+  //   easing: "linear",
+  //   // loop: false,
+  // });
+  //for mage class room 3
+  // anime({
+  //   targets: "#object3",
+  //   translateX: path("x"),
+  //   translateY: path("y"),
+  //   duration: 800,
+  //   easing: "linear",
+  //   // loop: false,
+  // });
+//for warrior class room 1
+// anime({
+//     targets: "#object4",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     duration: 5000,
+//     easing: "linear",
+//     // loop: false,
+//   });
+// for warrior class room 2
+// anime({
+//     targets: "#object5",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     duration: 5000,
+//     easing: "linear",
+//     // loop: false,
+//   });
+// for warrior class room 3
+// anime({
+//     targets: "#object6",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     duration: 5000,
+//     easing: "linear",
+//     // loop: false,
+//   });
+// for rogue class room 1
+// anime({
+//     targets: "#object7",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     duration: 5000,
+//     easing: "linear",
+//     // loop: false,
+//   });
+// for rogue class room 2
+// anime({
+//     targets: "#object8",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     duration: 5000,
+//     easing: "linear",
+//     // loop: false,
+//   });
+// for rogue class room 3
+// anime({
+//     targets: "#object9",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     duration: 5000,
+//     easing: "linear",
+//     // loop: false,
+//   });
