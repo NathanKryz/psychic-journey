@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Character extends Model {}
-
+// creating charater model for sql tables
 Character.init(
     {
         id: {

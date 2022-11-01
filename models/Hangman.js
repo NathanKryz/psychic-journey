@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Hangman extends Model {}
-
+// creating words model for sql tables
 Hangman.init(
     {
         id: {

@@ -33,6 +33,8 @@ To use this application:
 <img src="./public/img/CharacterSelect.png">
 <img src="./public/img/PJfight.png">
 
+## Credits
+
 ## License 
 
 MIT License

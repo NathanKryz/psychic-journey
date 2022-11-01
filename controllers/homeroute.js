@@ -2,6 +2,7 @@ const router = require('express').Router();
 const {User, Character} = require('../models');
 const withAuth = require('../utils/auth');
 
+// get function for rendering homepage to 'homepage' handlebars
 router.get('/', async (req, res) => {
     console.log("Rendering homepage");
     req.session.current_page = true;
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 
-
+// get function for rendering characters to the 'characterselect' handlebars with login authentication
 router.get('/characters', withAuth, async (req, res) => {
     try {
     console.log("Rendering character page");
@@ -30,6 +31,7 @@ router.get('/characters', withAuth, async (req, res) => {
     }
 });
 
+// get function for rendering game to 'game' handlebars depending on which character chosen
 router.get('/game', withAuth, async (req, res) => {
     try {
         console.log("Rendering gameplay page #1");

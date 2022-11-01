@@ -1,8 +1,10 @@
+// setup sequelize and dotenv environment
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
-
+// setup database to allow to deploy to heroku
+// allow .env file to be used for private data
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
