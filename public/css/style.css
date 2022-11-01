@@ -13,8 +13,8 @@
 	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bg.gif);
 	background-position: center;
 	background-size: cover;
-	position: absolute;
-   z-index: -3;
+	position: absolute; 
+    z-index: -3;
 
 }
 .navbar
@@ -57,6 +57,7 @@ nav ul li button
     background: transparent;
     cursor: pointer;
     font-family: sans-serif;
+	z-index: 10;
 }
 nav ul li button:hover
 {
@@ -342,3 +343,29 @@ span
 
 
 
+.logo{
+	position: relative;
+	  top: 400px; 
+	  left: 650px;
+	z-index: -3
+  }
+  
+  #btn-el {
+    font-family: 'Bungee Inline', cursive;
+    font-family: 'MedievalSharp', cursive;
+    bottom: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    top: 600px; 
+    left: 850px;
+    background: gray;
+	z-index: -3
+}
+
+main {
+	z-index: -3;
+	max-height: 0;
+	top: 10%;
+	position: absolute;
+}

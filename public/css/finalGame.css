@@ -112,7 +112,7 @@ a {
 /* same for all end */
 
 /* boss room 1 */
-.full-page {
+/* .full-page {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -121,7 +121,7 @@ a {
   background-size: cover;
   position: absolute;
   z-index: -3;
-}
+} */
 
 /* boss room 2 */
 .full-page2 {
@@ -133,6 +133,18 @@ a {
   background-size: cover;
   position: absolute;
   z-index: -3;
+}
+.background-element{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url(../img/bossroom1.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+
 }
 
 /* boss room 3 */

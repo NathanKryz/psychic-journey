@@ -1,5 +1,5 @@
 
-
+   
     var x=document.getElementById('login');
 		var y=document.getElementById('register');
 		var z=document.getElementById('btn');
@@ -40,7 +40,9 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/characters');
+      //  document.location.replace('/characters');
+      document.location.reload();
+
      console.log("check log");
     } else {
       alert(response.statusText);
@@ -66,7 +68,8 @@ const signupFormHandler = async (event) => {
       });
 
       if (response.ok) {
-      document.location.replace('/characters');
+      //  document.location.replace('/characters');
+        document.location.reload();
       console.log("check reg");
       }   else {
         alert(response.statusText);
@@ -80,3 +83,7 @@ const signupFormHandler = async (event) => {
 document.querySelector('#login').addEventListener('submit', loginFormHandler);
 
 document.querySelector('#register').addEventListener('submit', signupFormHandler);
+
+let playButton = document.querySelector('.butPlay');
+
+playButton.setAttribute("style", "opacity: 0");
