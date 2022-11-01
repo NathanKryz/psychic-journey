@@ -29,7 +29,7 @@ To use this application:
 - If your opponents hitpoints hit 0 you move on your the next round
 - If your hitpoints hit zero you lose the game
 
-<img src="./public/img/PJ-loginscreen.png">
+<img src="./public/img/PJloginscreen.png">
 <img src="./public/img/CharacterSelect.png">
 <img src="./public/img/PJfight.png">
 
