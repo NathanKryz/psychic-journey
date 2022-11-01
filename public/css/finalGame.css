@@ -98,12 +98,16 @@ a {
 
 #charDisplay {
   margin-top: -20%;
-  margin-left: 50px;
+  margin-left: 7%;
+  font-size: larger;
+  font-weight: bolder;
 }
 
 #monDisplay {
   margin-top: -10%;
-  margin-left: 1200px;
+  margin-left: 80%;
+  font-size: larger;
+  font-weight: bolder;
 }
 /* same for all end */
 
