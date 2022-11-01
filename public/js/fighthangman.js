@@ -4,8 +4,8 @@ const timerEl = document.getElementById('time-el');
 const background = document.querySelector('.full-page');
 let chosenCharacter = JSON.parse(localStorage.getItem('character'));
 console.log(chosenCharacter);
-let chosenMonster = JSON.parse(localStorage.getItem('monster'));
-console.log(chosenMonster);
+ let chosenMonster;
+// console.log(chosenMonster);
 
 const nameDisplay = document.getElementById('charname');
 const classthisDisplay = document.getElementById('classDisplay');
@@ -35,8 +35,9 @@ let hiddenWord = [];
 // let words = chosenMonster.hangmans;
 
 async function chooseMonster(choice) {
+  console.log("Monster chosen");
     reqUrl = choice;
-  
+    console.log("Monster ID: " + reqUrl);
     await fetch(`/api/monsters/${reqUrl}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
@@ -88,12 +89,13 @@ let displayCharacter = function (data) {
     newHPMonster = data.hitpoints;
  };
 
-displayMonster(chosenMonster);
+  displayMonster(JSON.parse(localStorage.getItem('monster')));
 
- function startFight() {
+ function startFight(chosenMonster) {
   console.log("You started a fight");
-  console.log(chosenMonster);
+  // console.log(chosenMonster);
   let words = chosenMonster.hangmans;
+ // console.log(words);
   win = false;
   timerCount = 30;
   startButton.disabled = true;
@@ -187,7 +189,8 @@ let monAttack = function (character, monster) {
 
 function checkContinue(hpchar, hpmons) {
     if (hpchar > 0 && hpmons > 0) {
-      startFight()
+      console.log(chosenMonster);
+      startFight(chosenMonster)
     } else if (hpmons <= 0){
       winGame()
     } else {
@@ -221,11 +224,14 @@ loseGame = () => {
     startButton.disabled = false;
 };
 
-function startAll(event) {
+async function startAll(event) {
   event.preventDefault();
-  let chosenMonster = JSON.parse(localStorage.getItem('monster'));
-  displayMonster(chosenMonster);
-  startFight()
+  // chooseMonster(choice);
+  chosenMonster = JSON.parse(localStorage.getItem('monster'));
+  //console.log(chosenMonster);
+  
+  await displayMonster(chosenMonster);
+  startFight(chosenMonster)
 } 
 
 startButton.addEventListener("click", startAll);
