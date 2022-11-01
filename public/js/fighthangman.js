@@ -146,7 +146,7 @@ function startGuess(words) {
                 console.log("Monster HP: " + newHPMonster);
             }
         }
-        if (timerCount === 0) {
+        if (timerCount <= 0) {
             clearInterval(timer);
             monAttack(chosenCharacter, chosenMonster);
             checkContinue(newHPCharacter, newHPMonster);
@@ -324,84 +324,3 @@ startButton.addEventListener("click", startAll);
 
 
 let path = anime.path("#svg-path path");
-  // for mage class room 1
-  // anime({
-  //   targets: "#object1",
-  //   translateX: path("x"),
-  //   translateY: path("y"),
-  //   duration: 800,
-  //   easing: "linear",
-  //   // loop: false,
-  // });
-  //for mage class room 2
-  // anime({
-  //   targets: "#object2",
-  //   translateX: path("x"),
-  //   translateY: path("y"),
-  //   duration: 800,
-  //   easing: "linear",
-  //   // loop: false,
-  // });
-  //for mage class room 3
-  // anime({
-  //   targets: "#object3",
-  //   translateX: path("x"),
-  //   translateY: path("y"),
-  //   duration: 800,
-  //   easing: "linear",
-  //   // loop: false,
-  // });
-//for warrior class room 1
-// anime({
-//     targets: "#object4",
-//     translateX: path("x"),
-//     translateY: path("y"),
-//     duration: 5000,
-//     easing: "linear",
-//     // loop: false,
-//   });
-// for warrior class room 2
-// anime({
-//     targets: "#object5",
-//     translateX: path("x"),
-//     translateY: path("y"),
-//     duration: 5000,
-//     easing: "linear",
-//     // loop: false,
-//   });
-// for warrior class room 3
-// anime({
-//     targets: "#object6",
-//     translateX: path("x"),
-//     translateY: path("y"),
-//     duration: 5000,
-//     easing: "linear",
-//     // loop: false,
-//   });
-// for rogue class room 1
-// anime({
-//     targets: "#object7",
-//     translateX: path("x"),
-//     translateY: path("y"),
-//     duration: 5000,
-//     easing: "linear",
-//     // loop: false,
-//   });
-// for rogue class room 2
-// anime({
-//     targets: "#object8",
-//     translateX: path("x"),
-//     translateY: path("y"),
-//     duration: 5000,
-//     easing: "linear",
-//     // loop: false,
-//   });
-// for rogue class room 3
-// anime({
-//     targets: "#object9",
-//     translateX: path("x"),
-//     translateY: path("y"),
-//     duration: 5000,
-//     easing: "linear",
-//     // loop: false,
-//   });
