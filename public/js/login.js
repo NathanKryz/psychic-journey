@@ -84,6 +84,6 @@ document.querySelector('#login').addEventListener('submit', loginFormHandler);
 
 document.querySelector('#register').addEventListener('submit', signupFormHandler);
 
-let playButton = document.querySelector('.butPlay');
+let playButtonhide = document.querySelector('.butPlay');
 
-playButton.setAttribute("style", "opacity: 0");
+playButtonhide.setAttribute("style", "opacity: 0");
