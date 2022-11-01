@@ -111,20 +111,21 @@ a
 /* Character vs Monster */
 .character2{
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     top:350px;
-    left:-150px;
+    left:50px;
     
 
 }
 
 .monster2{
     position: absolute;
-    width: 800px;
-    height: 800px;
-    top: 175px;
-    left: 70%;
+    width: 650px;
+    height: 650px;
+    top: 90px;
+    left: 65%;
+    z-index: -10;
 
 }
 
