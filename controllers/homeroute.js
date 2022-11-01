@@ -34,10 +34,35 @@ router.get('/game', withAuth, async (req, res) => {
     try {
         console.log("Rendering gameplay page #1");
         req.session.current_page = true;
-        res.render('game', {
-            logged_in: req.session.logged_in,
-            game_page: req.session.current_page,
-        });
+        req.session.activate_anims = true;
+        if (req.session.currentChar == 1){
+            console.log("Mage game");
+            res.render('game', {
+                logged_in: req.session.logged_in,
+                game_page: req.session.current_page,
+                mage_animation: req.session.activate_anims,
+            });
+        }
+        else if (req.session.currentChar == 2){
+            console.log("Warrior game");
+            res.render('game', {
+                logged_in: req.session.logged_in,
+                game_page: req.session.current_page,
+                warrior_animation: req.session.activate_anims,
+            });
+        }
+        else if (req.session.currentChar == 3){
+            console.log("rogue game");
+            res.render('game', {
+                logged_in: req.session.logged_in,
+                game_page: req.session.current_page,
+                rogue_animation: req.session.activate_anims,
+            });
+        }
+        // res.render('game', {
+        //     logged_in: req.session.logged_in,
+        //     game_page: req.session.current_page,
+        // });
     } catch (err) {
         res.status(500).json(err);
     }

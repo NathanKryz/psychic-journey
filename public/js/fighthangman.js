@@ -189,6 +189,7 @@ let monAttack = function (character, monster) {
 
 function checkContinue(hpchar, hpmons) {
     if (hpchar > 0 && hpmons > 0) {
+      console.log(req.session.currentChar);
       console.log(chosenMonster);
       startFight(chosenMonster)
     } else if (hpmons <= 0){
