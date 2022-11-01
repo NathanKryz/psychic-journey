@@ -340,5 +340,25 @@ span
   }
 }
 
+/* landing page play now */
+
+#btn-el {
+    font-family: 'Bungee Inline', cursive;
+    font-family: 'MedievalSharp', cursive;
+    bottom: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    top: 600px; 
+    left: 850px;
+    background: gray;
+}
+
+.logo{
+  position: relative;
+    top: 400px; 
+    left: 650px;
+
+}
 
 
