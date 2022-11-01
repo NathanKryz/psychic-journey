@@ -248,12 +248,12 @@ let monAttack = function (character, monster) {
       hitpDisplay.textContent = newHPCharacter;
 };
 
-function checkContinue(hpchar, hpmons) {
+async function checkContinue(hpchar, hpmons) {
     if (hpchar > 0 && hpmons > 0) {
       console.log(chosenMonster);
       startFight(chosenMonster)
     } else if (hpmons <= 0){
-      winGame()
+    await setTimeout(() =>  {winGame();}, 3000);
     } else {
       loseGame()
     }
@@ -304,9 +304,10 @@ winGame = async () => {
 };
 
 
-loseGame = () => {
+loseGame = async () => {
     guessWord.textContent = "You Will Never Defeat ME!";
-    startButton.disabled = false;
+    startButton.disabled = true;  
+   await setTimeout(() =>  {document.location.replace('/characters');}, 3000);
 };
 
 async function startAll(event) {
