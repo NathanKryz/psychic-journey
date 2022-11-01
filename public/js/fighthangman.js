@@ -170,6 +170,9 @@ function checkLetters(letter) {
       }
       guessWord.textContent = hiddenWord.join(" ");
     }
+    else {
+      timerCount--;
+    }
 };
 
 document.addEventListener("keydown", function(event) {
