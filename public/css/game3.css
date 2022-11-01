@@ -148,3 +148,14 @@ a
     stroke-width: 50px;
     stroke-dasharray: 12,12;
   }
+
+  
+#charDisplay {
+    margin-top: -100px;
+    margin-left: 50px;
+}
+
+#monDisplay {
+    margin-top: -92px;
+    margin-left: 800px
+}
