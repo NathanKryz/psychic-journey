@@ -35,6 +35,16 @@ To use this application:
 
 ## Credits
 
+https://github.com/NathanKryz
+https://github.com/ShayneKaruna
+https://github.com/ConstantMotion1
+
+https://animejs.com/
+https://getbootstrap.com/
+https://id.heroku.com/login
+https://prettier.io/
+https://eslint.org/
+
 ## License 
 
 MIT License
